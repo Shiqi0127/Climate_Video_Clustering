@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Create Full Dataset Sample
-Samples ~3000 videos across all years/months with length filtering
+Creates a representative sample of videos by sampling approximately 3000 videos across all available time periods with duration filtering.
 """
 
 import os
@@ -28,7 +27,7 @@ class VideoSampler:
     def get_video_path(self, video_id):
         """Construct full path to video file"""
         try:
-            date_part = video_id.split('_')[-1]  # YYYY-MM-DD
+            date_part = video_id.split('_')[-1]  # yyyy-mm-dd
             year, month, day = date_part.split('-')
             
             month_names = {
